@@ -70,6 +70,7 @@ class NearLabsLoginFragment : BaseFragment() {
 
     private fun setStartEditText(isEmail:Boolean){
         binding.apply {
+            userInputEditText.setText("")
             if(isEmail) {
                 isEmailSelected = true
                 userInputEditText.hint = "Email Address"

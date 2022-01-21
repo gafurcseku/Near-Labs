@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.android.nearlabs.R
 import com.android.nearlabs.core.BaseFragment
 import com.android.nearlabs.databinding.FragmentCreateAccountBinding
 
@@ -30,6 +31,8 @@ class CreateAccountFragment : BaseFragment() {
         binding.apply {
             topBarInclude.backButton.setOnClickListener { findNavController().popBackStack() }
             topBarInclude.titleBar.text = "Create NEAR Account"
+            createAccountButton.setOnClickListener { findNavController().navigate(R.id.action_CreateAccountFragment_to_sendGiftFragment) }
+            loginButton.setOnClickListener { findNavController().navigate(R.id.action_CreateAccountFragment_to_sendGiftFragment) }
         }
     }
 }

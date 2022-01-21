@@ -1,4 +1,4 @@
-package com.android.nearlabs
+package com.android.nearlabs.Utility
 
 import android.content.Context
 import android.graphics.Color
@@ -14,6 +14,7 @@ import androidx.core.content.ContextCompat.startActivity
 import android.content.Intent
 import android.net.Uri
 import androidx.core.content.ContextCompat
+import java.util.regex.Pattern
 
 
 object Utility {
@@ -44,5 +45,21 @@ object Utility {
     spanTxt.setSpan(ForegroundColorSpan(Color.parseColor("#49AEFF")), spanTxt.length - " Privacy Policy".length, spanTxt.length, 0)
         view.movementMethod = LinkMovementMethod.getInstance()
         view.setText(spanTxt, TextView.BufferType.SPANNABLE)
+    }
+
+    fun isValidEmail(email:String) : Boolean {
+        val emailAddressPattern = Pattern.compile(
+            "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
+                    "\\@" +
+                    "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+                    "(" +
+                    "\\." +
+                    "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+                    ")+" )
+            return emailAddressPattern.matcher(email).matches()
+    }
+
+    fun isValidPhone(phone:String) : Boolean {
+        return  android.util.Patterns.PHONE.matcher(phone).matches()
     }
 }

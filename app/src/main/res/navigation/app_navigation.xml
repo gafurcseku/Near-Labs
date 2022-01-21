@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/userLoginFragment"
+    android:id="@+id/app_navigation">
+
+    <fragment
+        android:id="@+id/userLoginFragment"
+        android:name="com.android.nearlabs.main.view.login.NearLabsLoginFragment"
+        android:label="@string/user_login"
+        tools:layout="@layout/fragment_near_labs_login"
+        />
+
+</navigation>

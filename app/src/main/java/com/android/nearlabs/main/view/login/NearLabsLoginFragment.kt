@@ -27,7 +27,7 @@ class NearLabsLoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.apply {
-            Utility.getLoginTermAndConditionTextView(termAndConditions)
+            Utility.getLoginTermAndConditionTextView(termAndConditions,requireContext())
         }
     }
 

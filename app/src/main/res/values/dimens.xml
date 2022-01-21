@@ -4,6 +4,8 @@
     <dimen name="margin_from_left_edge">25dp</dimen>
     <dimen name="margin_from_right_edge">25dp</dimen>
 
+    <dimen name="button_padding">12dp</dimen>
+
     <dimen name="extra_extra_small_text_size">12sp</dimen>
     <dimen name="extra_small_text_size">13sp</dimen>
     <dimen name="small_text_size">14sp</dimen>

@@ -40,7 +40,7 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="6dp"
+                android:layout_marginEnd="6dp"
                 android:src="@drawable/near_logo" />
 
             <com.google.android.material.card.MaterialCardView
@@ -56,7 +56,7 @@
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="labs"
+                    android:text="@string/labs"
                     android:textColor="@color/black"
                     android:theme="@style/text_14_px_bold" />
             </com.google.android.material.card.MaterialCardView>
@@ -73,15 +73,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp">
+        android:layout_marginStart="@dimen/margin_from_left_edge"
+        android:layout_marginEnd="@dimen/margin_from_right_edge">
 
         <com.google.android.material.button.MaterialButtonToggleGroup
             android:id="@+id/groupButtonToggleGroup"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_marginTop="20dp"
-            android:divider="@drawable/matrial_button_divider"
+            android:divider="@drawable/material_button_divider"
             android:showDividers="middle"
             app:checkedButton="@id/emailButton"
 
@@ -96,7 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:stateListAnimator="@null"
-                android:text="Email"
+                android:text="@string/email"
                 android:textAllCaps="false"
                 app:elevation="0dp"
 
@@ -107,9 +107,8 @@
                 style="@style/login_Material_ButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="2dp"
                 android:stateListAnimator="@null"
-                android:text="Phone"
+                android:text="@string/phone"
                 android:textAllCaps="false"
                 app:elevation="0dp"
                 app:strokeColor="#33FFFFFF" />
@@ -123,9 +122,9 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             android:background="@drawable/round_corner_edittext"
-            android:hint="Email Address"
+            android:hint="@string/email_address"
             android:fontFamily="@font/interregular"
-            android:textSize="16dp"
+            android:textSize="@dimen/medium_text_size"
             android:textColor="@color/gray3"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:layout_constraintTop_toBottomOf="@id/groupButtonToggleGroup" />
@@ -135,10 +134,13 @@
             android:layout_width="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="Get Started"
+            android:text="@string/get_started"
             android:theme="@style/text_16_px"
             android:textColor="@color/white"
             app:cornerRadius="10dp"
+            android:layout_marginTop="5dp"
+            android:paddingTop="@dimen/button_padding"
+            android:paddingBottom="@dimen/button_padding"
             android:backgroundTint="@color/gray4"
             android:drawableRight="@drawable/ic_arrow_forward"
             android:textAllCaps="false"
@@ -162,7 +164,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:gravity="center"
-            android:text="Already have Near Account?"
+            android:text="@string/already_have_near_account"
             android:layout_marginTop="20dp"
             android:theme="@style/text_14_px"
             android:textColor="@color/black"
@@ -176,9 +178,9 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             android:background="@drawable/round_corner_edittext"
-            android:hint="walletName.near"
+            android:hint="@string/walletname_near"
             android:fontFamily="@font/interregular"
-            android:textSize="16dp"
+            android:textSize="@dimen/medium_text_size"
             android:textColor="@color/gray3"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:layout_constraintTop_toBottomOf="@id/createAccountTextView" />
@@ -188,13 +190,17 @@
             android:layout_width="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="Login"
+            android:text="@string/login"
             android:theme="@style/text_16_px"
             android:textColor="@color/white"
             app:cornerRadius="10dp"
             android:backgroundTint="@color/blue"
+            android:paddingTop="@dimen/button_padding"
+            android:paddingBottom="@dimen/button_padding"
+            android:layout_marginTop="5dp"
             android:drawableRight="@drawable/ic_arrow_forward"
             android:textAllCaps="false"
+            android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toTopOf="@id/term_and_conditions"
             app:layout_constraintTop_toBottomOf="@id/accountInputEditText"
             android:layout_height="wrap_content"/>
@@ -210,7 +216,7 @@
             android:fontFamily="@font/interregular"
             android:textSize="13sp"
             android:textColor="#565656"
-            android:text="by clicking continue you must agree to near labs Terms  Conditions ans Privacy Policy"
+            android:text="Prvacy Policy"
             android:layout_height="wrap_content"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
